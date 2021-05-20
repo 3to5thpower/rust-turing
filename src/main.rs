@@ -80,9 +80,18 @@ fn make_map() -> RuleMap {
 }
 
 fn main() {
+    use std::env;
+    let args: Vec<String> = env::args().collect();
+    if args.len() != 2 {
+        println!("usage: cargo run \"initial tape string\"");
+        return;
+    }
+
+    let v = args[1].chars().collect();
+
     let mut m = Machine {
         rules: make_map(),
-        tape: vec!['0', '1', '1', 'B'],
+        tape: v,
         tape_index: 0,
         current_state: 0,
         goal: vec![4],
