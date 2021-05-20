@@ -1,8 +1,9 @@
 # rust-turing
 
 ## 実行方法
-`cargo run "initial tape string"`で実行できます。
-引数のテープ初期値は末尾にBを付けます
+`cargo run "initial tape string"`で実行できます。  
+引数のテープ初期値は末尾にBを付けます。  
+現在の状態遷移表はChap4.p7の図の通りになっています。
 
 ## 実行例
 0011を受理する例
